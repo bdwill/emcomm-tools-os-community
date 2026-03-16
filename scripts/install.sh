@@ -20,6 +20,9 @@ exitIfNotRoot
 ./remove-packages.sh
 ./install-branding.sh
 
+# Install XFCE if requested (useful for low-resource hardware like ASUS C202S)
+[ ! -z "${ET_INSTALL_XFCE}" ] && ./install-xfce.sh
+
 if command -v xfce4-session >/dev/null 2>&1; then
     ./configure-xfce.sh
 else
