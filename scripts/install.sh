@@ -20,7 +20,11 @@ exitIfNotRoot
 ./remove-packages.sh
 ./install-branding.sh
 
-./configure-gnome.sh
+if command -v xfce4-session >/dev/null 2>&1; then
+    ./configure-xfce.sh
+else
+    ./configure-gnome.sh
+fi
 ./configure-user.sh
 
 ./install-emcomm-tools.sh

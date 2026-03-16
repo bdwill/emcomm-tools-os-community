@@ -30,4 +30,5 @@ apt install \
   stow \
   xsel \
   tree \
+  xfce4-terminal \
   -y
