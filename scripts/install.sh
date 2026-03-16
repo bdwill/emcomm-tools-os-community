@@ -60,11 +60,11 @@ fi
 ./install-audio-tools.sh
 
 # Offline KBs (Cyberdeck)
-./install-wikipedia.sh
+#./install-wikipedia.sh
 
 # Add user-specific data
 ./download-osm-maps.sh
-[ ! -z "${ET_EXPERT}" ] && ./download-wikipedia.sh
+#[ ! -z "${ET_EXPERT}" ] && ./download-wikipedia.sh
 
 ./install-wine.sh
 
