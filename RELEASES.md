@@ -1,5 +1,24 @@
 # EmComm Tools OS Community Release
 
+## 2026.03.16.R6 (6.0.0) Release Notes
+
+* **XFCE Desktop Support & Optimization**
+  * Added automated XFCE installer (`scripts/install-xfce.sh`)
+  * Added XFCE-specific configuration (`scripts/configure-xfce.sh`)
+  * Support for `lightdm` display manager and automatic session selection
+  * Support for `xfce4-terminal` color palette configuration via `et-term`
+  * Added XFCE wallpaper support to `install-branding.sh`
+* **Low-Resource Hardware Optimizations (ASUS C202S)**
+  * Optimized DPI scaling (120 DPI / 1.25x) for 11.6" displays
+  * Disabled window animations to reduce CPU/GPU overhead
+  * Aggressive power management to prevent radio link drops
+  * Added optional GNOME removal (`ET_REMOVE_GNOME=true`) to save ~1.5GB+ disk space
+* **Installer Enhancements**
+  * Main `install.sh` now supports automated desktop environment selection
+  * Environment variable `ET_INSTALL_XFCE=true` triggers automated XFCE setup
+* **Documentation**
+  * Added `CUSTOMIZATIONS.md` detailing hardware and desktop environment optimizations
+
 ## 2025.11.28.R5 (5.0.0) Release Notes
 
 * Tier 1 radio PnP support
