@@ -26,11 +26,13 @@ cp ../logos/emcomm-tools-wallpaper.png /usr/share/backgrounds/warty-final-ubuntu
 
 # GNOME Wallpaper
 if command -v gsettings >/dev/null 2>&1; then
-    gsettings set org.gnome.desktop.background picture-uri file:////usr/share/backgrounds/emcomm-tools-wallpaper.png
+    export DISPLAY=${DISPLAY:-:0}
+    dbus-run-session -- gsettings set org.gnome.desktop.background picture-uri file:////usr/share/backgrounds/emcomm-tools-wallpaper.png
 fi
 
 # XFCE Wallpaper
 if command -v xfconf-query >/dev/null 2>&1; then
+    export DISPLAY=${DISPLAY:-:0}
     # Note: Property path can vary; this targets the most common default
-    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -n -t string -s /usr/share/backgrounds/emcomm-tools-wallpaper.png
+    dbus-run-session -- xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -n -t string -s /usr/share/backgrounds/emcomm-tools-wallpaper.png
 fi

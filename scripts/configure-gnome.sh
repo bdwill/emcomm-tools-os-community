@@ -17,4 +17,5 @@ chmod 644 /usr/share/icons/et-*.png
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 # Lock screen to one orientation
-gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
+export DISPLAY=${DISPLAY:-:0}
+dbus-run-session -- gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true

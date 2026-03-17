@@ -32,6 +32,9 @@ screen-keyboard-enabled = true
 [org.gnome.desktop.interface]
 toolkit-accessibility = true
 
+[org.gnome.settings-daemon.peripherals.touchscreen]
+orientation-lock = true
+
 [org.gnome.settings-daemon.plugins.power]
 sleep-inactive-ac-type = 'nothing'
 sleep-inactive-battery-type = 'nothing'
